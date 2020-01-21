@@ -7,7 +7,7 @@ date
 
 cardno=0
 
-dirs=`ls -d1 /sys/class/drm/card*/device/pp_table | sort --version-sort` #natural sort for 10+ cards
+dirs=`ls -d1 /sys/class/drm/card*/device/pp_table | sort` #natural sort for 10+ cards '.... sort --version-sort'
 if [[ -z $dirs ]]; then
 	echo -e "${RED}No AMD GPUs found as /sys/class/drm/card*/device/pp_table${NOCOLOR}"
 	exit 1
